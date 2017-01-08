@@ -169,9 +169,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var $menuNavOpen = document.getElementById('menu-nav-open');
   var $menuNavClose = document.getElementById('menu-nav-close');
 
-  $menuNavOpen.addEventListener('click', function(event) {
-    $menuNav.classList.add('is-active');
-  });
+  // $menuNavOpen.addEventListener('click', function(event) {
+  //   $menuNav.classList.add('is-active');
+  // });
 
   $menuNavClose.addEventListener('click', function(event) {
     $menuNav.classList.remove('is-active');
@@ -203,9 +203,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var $propertyShares = document.querySelectorAll('.property-share');
   var $modalInput = document.getElementById('modal-input');
   var baseURL = '' + window.location.origin + window.location.pathname;
-  baseURL = 'http://cssreference.io/';
-  var facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.io';
-  var twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
+  baseURL = 'http://cssreference.parryqiu.com/';
+  // var facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.parryqiu.com';
+  // var twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.parryqiu.com&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
 
   Array.prototype.forEach.call($propertyShares, function($el, index) {
     $el.addEventListener('click', function(e) {
@@ -213,24 +213,24 @@ document.addEventListener('DOMContentLoaded', function() {
       var shareURL = baseURL + 'property/' + propertyName;
       $modalInput.value = shareURL;
       encodedURL = encodeURIComponent(shareURL);
-      facebookURL = 'https://www.facebook.com/sharer.php?u=' + encodedURL;
-      twitterURL = buildTwitterURL(encodedURL, propertyName);
+      // facebookURL = 'https://www.facebook.com/sharer.php?u=' + encodedURL;
+      // twitterURL = buildTwitterURL(encodedURL, propertyName);
       openModal();
     });
   });
 
-  var $modalTwitter = document.getElementById('modal-twitter');
-  var $modalFacebook = document.getElementById('modal-facebook');
-
-  $modalTwitter.addEventListener('click', function(event) {
-    event.preventDefault();
-    window.open(twitterURL);
-  });
-
-  $modalFacebook.addEventListener('click', function(event) {
-    event.preventDefault();
-    window.open(facebookURL);
-  });
+  // var $modalTwitter = document.getElementById('modal-twitter');
+  // var $modalFacebook = document.getElementById('modal-facebook');
+  //
+  // $modalTwitter.addEventListener('click', function(event) {
+  //   event.preventDefault();
+  //   window.open(twitterURL);
+  // });
+  //
+  // $modalFacebook.addEventListener('click', function(event) {
+  //   event.preventDefault();
+  //   window.open(facebookURL);
+  // });
 
   // Modal
   var $modalShare = document.getElementById('modal-share');
@@ -258,16 +258,16 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeModal() {
     isModaling = false;
     $modalShare.classList.remove('is-active');
-    facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.io';
-    twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
+    facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.parryqiu.com';
+    twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.parryqiu.com&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
   }
 
   var modalClipboard = new Clipboard('#modal-copy');
 
   modalClipboard.on('success', function(e) {
     e.clearSelection();
-    e.trigger.innerHTML = 'Copied';
-    setTimeout(function() { e.trigger.innerHTML = 'Copy'; }, 500);
+    e.trigger.innerHTML = '已复制';
+    setTimeout(function() { e.trigger.innerHTML = '复制链接'; }, 500);
   });
 
   // Property: Launch animations

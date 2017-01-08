@@ -1,6 +1,6 @@
-# [CSS Reference](http://cssreference.io): a free visual guide to the most popular CSS properties
+# [CSS Reference](http://cssreference.parryqiu.com): a free visual guide to the most popular CSS properties
 
-[![CSS Reference screenshot](https://raw.github.com/jgthms/css-reference/master/images/css-reference-share.png)](http://cssreference.io)
+[![CSS Reference screenshot](https://raw.github.com/jgthms/css-reference/master/images/css-reference-share.png)](http://cssreference.parryqiu.com)
 
 # License
 

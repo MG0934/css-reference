@@ -5,25 +5,25 @@ window.helloCarbon = function() {
   window.carbonLoaded = true;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  var $menuHello = document.getElementById('menuHello');
-  var $huggingFace = document.getElementById('huggingFace');
-  var $carbon = document.getElementById('carbon');
-  var $placeholder = document.getElementById('placeholder');
-
-  setTimeout(function() {
-    if (window.carbonLoaded) {
-      $menuHello.style.minHeight = '218px';
-      $huggingFace.style.display = 'none';
-      $carbon.style.display = 'block';
-    } else {
-      $menuHello.style.minHeight = '0';
-      $huggingFace.style.display = 'block';
-      $carbon.style.display = 'none';
-    }
-    $placeholder.style.display = 'none';
-  }, 2000);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   var $menuHello = document.getElementById('menuHello');
+//   var $huggingFace = document.getElementById('huggingFace');
+//   var $carbon = document.getElementById('carbon');
+//   var $placeholder = document.getElementById('placeholder');
+//
+//   setTimeout(function() {
+//     if (window.carbonLoaded) {
+//       $menuHello.style.minHeight = '218px';
+//       $huggingFace.style.display = 'none';
+//       $carbon.style.display = 'block';
+//     } else {
+//       $menuHello.style.minHeight = '0';
+//       $huggingFace.style.display = 'block';
+//       $carbon.style.display = 'none';
+//     }
+//     $placeholder.style.display = 'none';
+//   }, 2000);
+// });
 </script>
 
 <aside class="menu">
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
   {% if page.template != "index" %}
     <nav id="menu-nav" class="menu-nav">
       <div class="menu-search">
-        <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for a property">
+        <input id="menu-search-input" type="search" autocomplete="off" placeholder="属性搜索">
         <i class="icon is-search"></i>
       </div>
       <div id="menu-list" class="menu-list">
@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
       </a>
     </nav>
   {% endif %}
-  <footer id="menuHello" class="menu-hello">
-    <div id="huggingFace">
+  <!-- <footer id="menuHello" class="menu-hello"> -->
+    <!-- <div id="huggingFace">
       <p>
         CSS Reference is <strong>free</strong> and <br>
         always will be!
@@ -83,24 +83,24 @@ document.addEventListener('DOMContentLoaded', function() {
       <p>
         Thank you! <img src="{{site.url}}/images/hugging-face.png" alt="Hugging face emoji">
       </p>
-    </div>
-    <div id="placeholder" class="placeholder">
+    </div> -->
+    <!-- <div id="placeholder" class="placeholder">
       <div class="placeholder-image"><div></div></div>
       <div class="placeholder-content"><div></div><div></div><div></div></div>
       <div class="placeholder-footer"><div></div></div>
-    </div>
-    <div id="carbon">
+    </div> -->
+    <!-- <div id="carbon">
       <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=cssreferenceio" id="_carbonads_js" onload ="window.helloCarbon()"></script>
-    </div>
-  </footer>
+    </div> -->
+  <!-- </footer> -->
 </aside>
 
 <footer class="footer">
   <p class="footer-title">
-    <strong>{{site.subtitle}}</strong> <small>Created by <a href="https://twitter.com/jgthms">@jgthms</a></small>
+    <strong>{{site.subtitle}}</strong> <small>Created by <a target="_blank" href="https://twitter.com/jgthms">@jgthms</a></small> <small>Translated into Chinese by <a target="_blank" href="http://weibo.com/parryqiu">@Parry</a></small>
   </p>
   <p class="footer-share footer-share--social">
-    <strong class="footer-share-label">Share</strong>
+    <!-- <strong class="footer-share-label">Share</strong>
     <a class="footer-share-button is-twitter"
       data-social-network="Twitter"
       data-social-action="tweet"
@@ -116,13 +116,13 @@ document.addEventListener('DOMContentLoaded', function() {
       target="_blank">
       {% include svg/facebook.html %}
     </a>
-    <a id="menu-nav-open" class="footer-share-nav">Menu</a>
+    <a id="menu-nav-open" class="footer-share-nav">Menu</a> -->
   </p>
-  <div class="footer-facebook">
+  <!-- <div class="footer-facebook">
     <iframe class="footer-iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-  </div>
+  </div> -->
   <div class="footer-github">
-    <iframe class="footer-iframe" data-src="https://ghbtns.com/github-btn.html?user=jgthms&repo=css-reference&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+    <iframe class="footer-iframe" data-src="https://ghbtns.com/github-btn.html?user=ParryQiu&repo=css-reference&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
   </div>
   <!-- <p class="footer-share footer-share--contribute">
     <strong class="footer-share-label">Contribute</strong>

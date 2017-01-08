@@ -5,20 +5,13 @@ property_name: flex-shrink
 
 <section id="flex-shrink" class="property">
   <header class="property-header">
-    <nav class="property-links">
-        <a class="property-collection" href="{{site.url}}/flexbox/">
-          In collection: <strong>flexbox</strong>
-        </a>
-      <a class="property-links-direct" href="{{site.url}}/property/flex-shrink/" data-property-name="flex-shrink" data-tooltip="Single page for this property">Permalink</a>
-      <a class="property-share" data-tooltip="Share on Twitter or Facebook" data-property-name="flex-shrink">Share</a>
-        <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="See on Can I use..." rel="external">Can I use</a>
-      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-shrink" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
-    </nav>
+    <nav class="property-links"><a class="property-collection" href="{{site.url}}/flexbox/">章节: <strong>flexbox</strong> </a><a class="property-links-direct" href="{{site.url}}/property/flex-shrink/" data-property-name="flex-shrink" data-tooltip="查看该页面的固定链接">固定链接</a>            <a class="property-share" data-tooltip="分享给其他好友" data-property-name="flex-shrink">分享</a> <a target="_blank" href="http://caniuse.com/#feat=flexbox" data-tooltip="使用 Can I Use 检查特性支持情况" rel="external">检查特性支持情况</a> <a
+            target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/flex-shrink" data-tooltip="Mozilla Developer Network" rel="external">MDN</a></nav>
     <h2 class="property-name">
       <a href="#flex-shrink"><span>#</span>flex-shrink</a>
     </h2>
     <div class="property-description">
-      <p>Defines how much a flexbox item should <strong>shrink</strong> if there&#39;s <strong>not enough</strong> space available.</p>
+      <p>定义了当没有足够空间的时候，元素如何<strong>压缩</strong>自身空间。</p>
 
     </div>
 
@@ -33,13 +26,13 @@ property_name: flex-shrink
     <section class="example">
       <header class="example-header">
         <p class="example-name">
-            <code class="example-default" data-tooltip="This is the property's default value">default</code>
+            <code class="example-default" data-tooltip="这是属性的默认值">默认属性</code>
 
 
-          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="flex-shrink: 1;">flex-shrink: 1;</code>
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-shrink: 1;">flex-shrink: 1;</code>
         </p>
         <div class="example-description">
-          <p>If there&#39;s <strong>not enough</strong> space available in the container&#39;s main axis, the element will <strong>shrink</strong> by a factor of <strong>1</strong>, and will wrap its content.</p>
+          <p>当主轴（横向轴）没有<strong>足够</strong>空间的时候，元素将按照扩展因子 <strong>1</strong> 来进行<strong>压缩</strong>，也将导致换行（折叠）其自身的内容。</p>
 
         </div>
       </header>
@@ -57,11 +50,11 @@ property_name: flex-shrink
         <p class="example-name">
 
 
-          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="flex-shrink: 0;">flex-shrink: 0;</code>
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-shrink: 0;">flex-shrink: 0;</code>
         </p>
         <div class="example-description">
-          <p>The element will <strong>not</strong> shrink: it will retain the width it needs, and <strong>not</strong> wrap its content. Its siblings will shrink to give space to the target element.</p>
-<p>Because the target element will not wrap its content, there is a chance for the flexbox container&#39;s content to <strong>overflow</strong>.</p>
+          <p>元素<strong>不</strong>压缩：占用它所需要的宽且<strong>不</strong>换行（折叠）自身的内容。同级元素将压缩给出目标元素足够的控件。</p>
+<p>因为目标元素不换行（折叠）自身的内容，所以可能会导致 flexbox 容器的内容产生元素移除。</p>
 
         </div>
       </header>
@@ -80,12 +73,12 @@ property_name: flex-shrink
         <p class="example-name">
 
 
-          <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="flex-shrink: 2;">flex-shrink: 2;</code>
+          <code class="example-value" data-tooltip="点击复制" data-clipboard-text="flex-shrink: 2;">flex-shrink: 2;</code>
         </p>
         <div class="example-description">
-          <p>Because the flex-shrink value is <strong>relative</strong>, its behaviour depends on the value of the flexbox item <strong>siblings</strong>.</p>
-<p>In this example, the green item wants to fill 100% of the width. The space it needs is <strong>taken from</strong> its two siblings, and is divided in <strong>4</strong>:</p>
-<ul><li><strong>3</strong> quarters are taken from the <strong>red</strong> item</li><li><strong>1</strong> quarter is taken from the <strong>yellow</strong> item</li></ul>
+          <p>因为 flex-shrink 的值是<strong>相对</strong>的，它的具体表现还取决于此元素的<strong>同级元素</strong>。</p>
+<p>在此例子中，绿色的元素占用了 100% 的宽度。此部分的空间将从它的两个同级元素中<strong>占用</strong>，并且占用被分成了 <strong>4</strong>份：</p>
+<ul><li>四分之<strong>三</strong>从<strong>红色</strong>元素中获取（红色压缩四分之三）</li><li>四分之<strong>一</strong>从<strong>黄色</strong>元素中获取（黄色压缩四分之一）</li></ul>
         </div>
       </header>
 
